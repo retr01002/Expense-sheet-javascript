@@ -1,3 +1,3 @@
 # About
 
-Basic Expense sheet made with vanilla javascript
+Basic Expense sheet made with vanilla javascript!
