@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Expense Sheet</title>
+        <link rel="stylesheet" href="style.css" />
+    </head>
+    <body>
+        <header id="header">
+            <div>Expense Tracker</div>
+        </header>
+        <br/>
+        <div id="newitemhead">Add A New Item:</div>
+        <!-- <br/> -->
+        <div id="form">
+            <div>
+                <label class="sizer1"  style="position: relative; left: 0.3vw;">Name:</label>
+                <input type="text" id="nameE" class="sizer1 borderss" style=" position: relative; left: 0.3vw; width: 94vw;">
+            </div>
+            <div id="inputarea">
+                <div style="position: relative; left: 0.3vw;">
+                    <label class="sizer1">Date:</label>
+                    <input id="date" type="date" class="sizer1 borderss" style="height: 5.5vh; width: 40vw;">
+                </div>
+                <div style="position: relative; left: 5vw;">
+                    <label class="sizer1">Amount(in rupees):</label>
+                    <input id="amount" type="text"  class="sizer1 borderss"  style="height: 5.5vh; width: 48vw;">
+                </div>
+            </div>
+            <br/>
+            <button type="submit" id="submit_button">Add Expense</button>
+        </div>
+        <table id="table" style="border-collapse: collapse;">
+            <tbody>
+              <tr>
+                <th>Name</th>
+                <th>Date</th>
+                <th>Amount</th>
+              </tr>
+            </tbody>
+          </table>
+        <script src="expense.js"></script>
+    </body>
+</html>
