@@ -58,6 +58,7 @@ function reloadPage(){
     }
     table.innerHTML = localStorage.getItem("table");
     setButtons();
+    displayTotalCost();
     console.log(localStorage);
 }
 
@@ -71,6 +72,7 @@ function putNewValue(){
     cell1.innerHTML = nameE.value;
     cell2.innerHTML = date.value;
     cell3.innerHTML = amount.value;
+    cell3.className = "amnt";
     let btn = createDelBtn();
     cell4.appendChild(btn);
     cell4.style.border = "none";
@@ -93,5 +95,15 @@ function setButtons(){
 }
 
 function resetHead(){
-    localStorage.setItem("table", "<tbody><tr><th>Name</th><th>Date</th><th>Amount</th></tr></tbody>");
+    localStorage.setItem("table", tableInitVal);
+}
+
+function displayTotalCost(){
+    let arr = document.getElementsByClassName("amnt");
+    let h = document.getElementById("h2");
+    let s = 0
+    for(i = 0; i < arr.length; i++){
+        s += parseInt(arr[i].innerHTML);
+    };
+    h2.innerHTML = "Total Cost = " + s;
 }
